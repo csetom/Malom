@@ -12,6 +12,7 @@ class grafikai_mezo : public widget {
 		 void set_szin(int szin);
 		 grafikai_mezo(int x, int y);
 		 grafikai_mezo(int x, int y , int r);
+		 bool bennevan(int xpos, int ypos);
 };
 
 

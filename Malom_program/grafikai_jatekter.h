@@ -10,8 +10,7 @@ public:
 	void set_statusz(std::string statusz);
     void rajzol();
     grafikai_jatekter();
-
+	int bennevan_mezo(int xpos, int ypos);
 };
-
 
 #endif // GRAFIKAI_JATEKTER_H_INCLUDED

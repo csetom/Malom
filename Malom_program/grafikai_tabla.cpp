@@ -91,3 +91,18 @@ void grafikai_tabla::rajzol(){
 		(*it)->rajzol();
 	}
 };
+
+int grafikai_tabla::bennevan_mezo(int xpos, int ypos){
+	for (int i=0; i<mezok.size(); i++){
+        grafikai_mezo * akt=mezok[i];
+        if (akt->bennevan(xpos,ypos)) {
+			return (i);
+        } else {
+			akt->selected=false;
+        };
+	};
+	return -1;
+};
+
+
+

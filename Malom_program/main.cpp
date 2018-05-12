@@ -21,7 +21,7 @@ int main()
 	gout.open(XX,YY);
 	jatekmester malom;
 	gin.timer(30);
-	malom.indit();
+	malom.futtat();
 
 
     return 0;

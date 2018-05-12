@@ -11,6 +11,7 @@ private:
 public:
 	void rajzol();
 	grafikai_tabla(int x, int y);
+	int bennevan_mezo(int xpos, int ypos);
 };
 
 
