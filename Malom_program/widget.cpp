@@ -53,22 +53,7 @@ widget::widget () {
 			ex=xpos;
 			ey=ypos;
 		};
-		void widget::mozgat(int xpos, int ypos){
-			//int eex=x;
-			//int eey=y;
-			if (x<=1) { x=1;};
-			if (y<=1) {y=1;};
-			if (x+mx>=XX) {x=XX-mx;};
-			if (y+my>=YY) {y=YY-my;};
-//cout<<"x: "<<x;
-			x+=xpos-ex;
-			y+=ypos-ey;
-//cout<<"\n ujx: "<<x;
-			ex=xpos;
-			ey=ypos;
-			//x=xpos;
-			//y=ypos;
-		};
+
 		void widget::kirajzol(){
 			//if (x+mx>XX) {hx=XX-x;}
 			//if (y+my>YY) {hy=YY-y;}
@@ -116,48 +101,8 @@ widget::widget () {
 	//	};
 	//	void widget::ertekdown(){
 	//	};
-		void widget::novel (int xpos, int ypos) {
-			if (x<=1) { x=1;};
-			if (y<=1) {y=1;};
-			if (x+mx>=XX) {x=XX-mx;};
-			if (y+my>=YY) {y=YY-my;};
-			mx+=xpos-ex;
-			my+=ypos-ey;
-			mx=abs(mx);
-			my=abs(my);
-			ex=xpos;
-			ey=ypos;
 
-		};
 	 void widget::event_handler (genv::event ev){
-
-		if (ev.type==ev_mouse && ev.button==btn_right && ev.button==3){
-			ex=ev.pos_x;
-			ey=ev.pos_y;
-			jegernyomva=true;
-		};
-		if (ev.type==ev_mouse  && ev.button==1){
-			ex=ev.pos_x;
-			ey=ev.pos_y;
-			begernyomva=true;
-		};
-		if (selected) {
-			if (ev.type==ev_mouse  && ev.button==0 && begernyomva ){
-	//cout<<ev.pos_x;
-				mozgat(ev.pos_x,ev.pos_y);
-
-			};
-			if (ev.type==ev_mouse  && ev.button==0 && jegernyomva){
-					novel(ev.pos_x,ev.pos_y);
-
-			};
-		};
-		if (ev.type==ev_mouse  && ev.button==-1){
-			begernyomva=false;
-		};
-		if (ev.type==ev_mouse  && ev.button==-3){
-			jegernyomva=false;
-		};
 	 };
 	void widget::selected_beallit (bool be){
 		selected=be;

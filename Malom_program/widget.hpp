@@ -22,13 +22,12 @@ protected:
 
 		virtual void rajzol(int keret,int rx, int ry)=0;
 		virtual void meretallit (int xpos, int ypos);
-		virtual void novel (int xpos, int ypos);
+
 
 
 
 public:
 	bool selected=0;
-	virtual void mozgat(int xpos, int ypos);
 	void selected_beallit (bool be);
 	void kirajzol();
 	void set_name(std::string);

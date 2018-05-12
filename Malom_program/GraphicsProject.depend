@@ -431,7 +431,7 @@
 	"Functorbutton.h"
 	<functional>
 
-1526119093 c:\users\csetom\documents\github\malom\malom_program\widget.hpp
+1526128145 c:\users\csetom\documents\github\malom\malom_program\widget.hpp
 	<time.h>
 	<iostream>
 	<vector>
@@ -468,7 +468,7 @@
 	<stdlib.h>
 	<string>
 
-1526119093 c:\users\csetom\documents\github\malom\malom_program\number.hpp
+1526128253 c:\users\csetom\documents\github\malom\malom_program\number.hpp
 	"graphics.hpp"
 	"widget.hpp"
 	<time.h>
@@ -487,7 +487,7 @@
 	"inputfield.h"
 	"graphics.hpp"
 
-1526126433 source:c:\users\csetom\documents\github\malom\malom_program\main.cpp
+1526128006 source:c:\users\csetom\documents\github\malom\malom_program\main.cpp
 	"graphics.hpp"
 	<time.h>
 	<iostream>
@@ -495,7 +495,6 @@
 	<stdlib.h>
 	<string>
 	"widget.hpp"
-	"Number.hpp"
 	"fstream"
 	"inputfield.h"
 
@@ -507,7 +506,7 @@
 	"menu.h"
 	"graphics.hpp"
 
-1526119093 source:c:\users\csetom\documents\github\malom\malom_program\number.cpp
+1526128176 source:c:\users\csetom\documents\github\malom\malom_program\number.cpp
 	"Number.hpp"
 
 1526119093 source:c:\users\csetom\documents\github\malom\malom_program\szamologep.cpp
@@ -516,7 +515,7 @@
 	<string>
 	<functional>
 
-1526119093 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
+1526128239 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
 	"widget.hpp"
 
 1526119093 source:c:\users\csetom\documents\github\malom\malom_program\window.cpp

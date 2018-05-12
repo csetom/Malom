@@ -29,7 +29,6 @@ private:
 	virtual void gombbennevan (int xpos, int ypos);
     void gombinic();
 
-	virtual void mozgat(int xpos,int ypos);
 	void novel (int xpos, int ypos);
 	virtual void ertekup();
 	virtual void ertekup(int limit);

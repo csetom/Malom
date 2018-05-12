@@ -56,15 +56,7 @@ void Number::gombbennevan (int xpos, int ypos){
 			<<text("-");
 
 	};
-	void Number::mozgat(int xpos,int ypos) {
-		widget::mozgat(xpos,ypos);
-		gombinic();
 
-	}
-	void Number::novel (int xpos,int ypos){
-		widget::novel(xpos,ypos);
-		gombinic();
-	};
 	void Number::gombinic(){
 		fgomb_x=x+mx-gmeret;
 		fgomb_y=y;
