@@ -5,16 +5,8 @@
 #include <stdlib.h>
 #include <string>
 
-
-#include "logikai_mezo.h" //tesztelesig
-#include "grafikai_tabla.h"
 #include "jatekmester.h"
 
-
-#include "widget.hpp"
-#include "fstream"
-
-#include "inputfield.h"
 
 using namespace std;
 
@@ -27,9 +19,9 @@ int main()
 	srand(time(NULL));
 	event ev;
 	gout.open(XX,YY);
-
+	jatekmester malom;
 	gin.timer(30);
-
+	malom.indit();
 
 
     return 0;

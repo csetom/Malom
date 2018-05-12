@@ -14,9 +14,8 @@ private:
 	*/
 
 public:
-	void event_loop (genv::event ev) {
-        ///nem biztos hogy igy lesz
-	};
+	void indit();
+
 };
 
 #endif // JATEKMESTER_H_INCLUDED

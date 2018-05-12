@@ -431,7 +431,7 @@
 	"Functorbutton.h"
 	<functional>
 
-1526130366 c:\users\csetom\documents\github\malom\malom_program\widget.hpp
+1526143755 c:\users\csetom\documents\github\malom\malom_program\widget.hpp
 	<time.h>
 	<iostream>
 	<vector>
@@ -487,19 +487,14 @@
 	"inputfield.h"
 	"graphics.hpp"
 
-1526132377 source:c:\users\csetom\documents\github\malom\malom_program\main.cpp
+1526133140 source:c:\users\csetom\documents\github\malom\malom_program\main.cpp
 	"graphics.hpp"
 	<time.h>
 	<iostream>
 	<vector>
 	<stdlib.h>
 	<string>
-	"logikai_mezo.h"
-	"grafikai_tabla.h"
 	"jatekmester.h"
-	"widget.hpp"
-	"fstream"
-	"inputfield.h"
 
 1526119093 c:\users\csetom\documents\github\malom\malom_program\szamologep.h
 	"window.h"
@@ -518,7 +513,7 @@
 	<string>
 	<functional>
 
-1526130292 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
+1526141560 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
 	"widget.hpp"
 
 1526130399 source:c:\users\csetom\documents\github\malom\malom_program\window.cpp
@@ -531,22 +526,34 @@
 
 1526128790 source:c:\users\csetom\documents\github\malom\malom_program\logikai_mezo.cpp
 
-1526130417 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
+1526143829 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
+	"grafikai_mezo.h"
+	<ostream>
 
-1526132098 c:\users\csetom\documents\github\malom\malom_program\grafikai_tabla.h
+1526139800 c:\users\csetom\documents\github\malom\malom_program\grafikai_tabla.h
 	"grafikai_mezo.h"
 	"widget.hpp"
 	"vector"
 
-1526130674 c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.h
+1526143401 c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.h
 	"widget.hpp"
 	"graphics.hpp"
 
-1526132683 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
+1526133148 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
 	"logikai_mezo.h"
 	"grafikai_jatekter.h"
 	<vector>
 
-1526132467 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
+1526141070 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
 	"grafikai_tabla.h"
+
+1526141108 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
+	"jatekmester.h"
+
+1526141636 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.cpp
+	"grafikai_jatekter.h"
+
+1526142921 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_tabla.cpp
+	"grafikai_tabla.h"
+	<ostream>
 

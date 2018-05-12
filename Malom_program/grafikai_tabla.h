@@ -6,10 +6,11 @@
 
 class grafikai_tabla:public widget{
 private:
-	std::vector<grafikai_mezo > mezok; // lehet hogy pointer lehet hogy nem, meg nem tudom
+	std::vector<grafikai_mezo *> mezok; // lehet hogy pointer lehet hogy nem, meg nem tudom
 
 public:
-	void razj();
+	void rajzol();
+	grafikai_tabla(int x, int y);
 };
 
 

@@ -30,7 +30,7 @@ public:
 	bool selected=0;
 	void selected_beallit (bool be);
 	void kirajzol();
-	virtual void razjol()=0;
+	virtual void rajzol()=0;
 	void set_name(std::string);
 	std::string  get_nev();
 	virtual std::string get_ertek();
@@ -40,6 +40,7 @@ public:
 	void kivalrajz();
 	virtual void event_handler (genv::event ev);
 	widget ();
+	widget (int xpos, int ypos);
 	widget (int xpos, int ypos, int ,int );
 };
 

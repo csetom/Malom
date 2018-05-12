@@ -38,11 +38,13 @@ widget::widget () {
 	string widget::get_nev(){
 		return nev;
 	};
-		//void widget::rajzol(int keret,int rx, int ry)=0;
+	//void widget::rajzol()=0;
 
+	widget::widget (int xpos, int ypos):x(xpos),y(ypos) {
 
+	};
 
-		void widget::meretallit (int xpos, int ypos) {
+	void widget::meretallit (int xpos, int ypos) {
 			mx+=xpos-ex;
 			my+=ypos-ey;
 			//if (x<=1) { x=1;};
