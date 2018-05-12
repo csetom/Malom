@@ -504,7 +504,7 @@
 	"menu.h"
 	"graphics.hpp"
 
-1526128176 source:c:\users\csetom\documents\github\malom\malom_program\number.cpp
+1526145045 source:c:\users\csetom\documents\github\malom\malom_program\number.cpp
 	"Number.hpp"
 
 1526119093 source:c:\users\csetom\documents\github\malom\malom_program\szamologep.cpp
@@ -513,7 +513,7 @@
 	<string>
 	<functional>
 
-1526141560 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
+1526143846 source:c:\users\csetom\documents\github\malom\malom_program\widget.cpp
 	"widget.hpp"
 
 1526130399 source:c:\users\csetom\documents\github\malom\malom_program\window.cpp
@@ -526,7 +526,7 @@
 
 1526128790 source:c:\users\csetom\documents\github\malom\malom_program\logikai_mezo.cpp
 
-1526143829 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
+1526144174 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
 	"grafikai_mezo.h"
 	<ostream>
 
@@ -539,7 +539,7 @@
 	"widget.hpp"
 	"graphics.hpp"
 
-1526133148 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
+1526144667 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
 	"logikai_mezo.h"
 	"grafikai_jatekter.h"
 	<vector>
@@ -547,7 +547,7 @@
 1526141070 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
 	"grafikai_tabla.h"
 
-1526141108 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
+1526144529 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
 	"jatekmester.h"
 
 1526141636 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.cpp

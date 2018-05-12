@@ -40,17 +40,23 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="Number.hpp" />
-		<Unit filename="adatbazis.cpp" />
-		<Unit filename="adatbazis.h" />
+		<Unit filename="Functorbutton.cpp" />
+		<Unit filename="Functorbutton.h" />
+		<Unit filename="gomb.cpp" />
+		<Unit filename="gomb.h" />
+		<Unit filename="grafikai_jatekter.cpp" />
+		<Unit filename="grafikai_jatekter.h" />
+		<Unit filename="grafikai_mezo.cpp" />
+		<Unit filename="grafikai_mezo.h" />
+		<Unit filename="grafikai_tabla.cpp" />
+		<Unit filename="grafikai_tabla.h" />
 		<Unit filename="inputfield.cpp" />
 		<Unit filename="inputfield.h" />
+		<Unit filename="jatekmester.cpp" />
+		<Unit filename="jatekmester.h" />
+		<Unit filename="logikai_mezo.cpp" />
+		<Unit filename="logikai_mezo.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menu.cpp" />
-		<Unit filename="menu.h">
-			<Option weight="100" />
-		</Unit>
-		<Unit filename="number.cpp" />
 		<Unit filename="widget.cpp" />
 		<Unit filename="widget.hpp" />
 		<Unit filename="window.cpp" />
