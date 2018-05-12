@@ -524,10 +524,10 @@
 	<vector>
 	"grafikai_mezo.h"
 
-1526151757 source:c:\users\csetom\documents\github\malom\malom_program\logikai_mezo.cpp
+1526154342 source:c:\users\csetom\documents\github\malom\malom_program\logikai_mezo.cpp
 	"logikai_mezo.h"
 
-1526147730 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
+1526154410 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_mezo.cpp
 	"grafikai_mezo.h"
 	<ostream>
 
@@ -540,7 +540,7 @@
 	"widget.hpp"
 	"graphics.hpp"
 
-1526152680 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
+1526155254 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
 	"logikai_mezo.h"
 	"grafikai_jatekter.h"
 	<vector>
@@ -548,7 +548,7 @@
 1526150460 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
 	"grafikai_tabla.h"
 
-1526153161 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
+1526154304 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
 	"jatekmester.h"
 
 1526150465 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.cpp

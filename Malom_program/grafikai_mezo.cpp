@@ -14,17 +14,15 @@ bool grafikai_mezo::bennevan(int xpos, int ypos){
 
 void grafikai_mezo::rajzol(){
 //cout<<x<<" "<<y<<endl;
-	if (selected) {
+	if (szin==0){
+		gout<<color(255,255,255);
+	} else if (szin==1){
+		gout<<color(255,0,255);
+	} else if (szin==2){
+		gout<<color(255,255,0);
+	} else if (szin==3) {
 		gout<<color(0,255,255);
-	} else {
-		if (szin==0){
-			gout<<color(255,255,255);
-		} else if (szin==1){
-			gout<<color(255,0,255);
-		} else if (szin==2){
-			gout<<color(255,255,0);
-		};
-	}
+	};
 	for (int i=x-r; i<=x+r; i++) {
 		for (int j=y-r; j<=y+r; j++) {
 			if ((i-x)*(i-x)+(j-y)*(j-y)<r*r) {

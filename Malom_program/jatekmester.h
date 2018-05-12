@@ -15,11 +15,14 @@ private:
 	void jatekter_rajzol();
 	void menu_fazis();
 	void felrakas_fazis(genv::event ev);
-	void lepes_fazis(int szin);
+	void lepes_fazis(genv::event ev);
 	void ugras_fazis(int szin);
 	bool malom_vizsgal(std::vector<std::vector<int>> vizsgalandok,int aktualis);
 	void levetel(genv::event ev);
 	void indit();
+	int selected;
+	bool van_szabad_szomszed(int aktualis);
+	bool szomszedban_van(int aktualis);
 
 public:
 

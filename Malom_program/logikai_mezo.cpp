@@ -15,3 +15,6 @@ void logikai_mezo::set_szin(int aktiv_jatekos) {
 vector<vector<int>> logikai_mezo::get_malom_szomszed () {
 	return malom_szomszed;
 }
+vector<int> logikai_mezo::get_szomszed () {
+	return szomszed;
+}
