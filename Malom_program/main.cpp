@@ -5,6 +5,12 @@
 #include <stdlib.h>
 #include <string>
 
+
+#include "logikai_mezo.h" //tesztelesig
+#include "grafikai_tabla.h"
+#include "jatekmester.h"
+
+
 #include "widget.hpp"
 #include "fstream"
 

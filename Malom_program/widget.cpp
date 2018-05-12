@@ -54,7 +54,7 @@ widget::widget () {
 			ey=ypos;
 		};
 
-		void widget::kirajzol(){
+		/*void widget::kirajzol(){
 			//if (x+mx>XX) {hx=XX-x;}
 			//if (y+my>YY) {hy=YY-y;}
 			int rx=x;
@@ -77,13 +77,14 @@ widget::widget () {
 				<<color(255,255,255)
 //				<<dot
 				<<text("cica");
-*/
 
-		};
+
+		}; */
+
 		bool widget::bennevan(int xpos,int ypos) {
 			return (xpos>=x && xpos<=x+mx && ypos>=y && ypos<=y+my);
 		};
-		void widget::kivalrajz() {
+	/*	void widget::kivalrajz() {
 			int rx=x;
 			int ry=y;
 			if (x<0) { rx=0;};
@@ -97,6 +98,7 @@ widget::widget () {
 			rajzol(4,rx,ry);
 
 		};
+	*/
 	//	void widget::ertekup(){
 	//	};
 	//	void widget::ertekdown(){

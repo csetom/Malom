@@ -20,7 +20,7 @@ protected:
 		std::string nev;
       //  int ertek; // ki
 
-		virtual void rajzol(int keret,int rx, int ry)=0;
+		//virtual void rajzol(int keret,int rx, int ry)=0;
 		virtual void meretallit (int xpos, int ypos);
 
 
@@ -30,6 +30,7 @@ public:
 	bool selected=0;
 	void selected_beallit (bool be);
 	void kirajzol();
+	virtual void razjol()=0;
 	void set_name(std::string);
 	std::string  get_nev();
 	virtual std::string get_ertek();

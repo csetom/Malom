@@ -42,17 +42,17 @@ void window::event_loop(event ev){
 };
 
 void window::rajzol() {
-	for (int i=0; i<widgets.size(); i++ ){
+/*	for (int i=0; i<widgets.size(); i++ ){
 		widget * aktualis=widgets[i];
 		if (aktualis->selected) {
 			aktualis->kivalrajz();
 		} else {
-			aktualis->kirajzol();
+			aktualis->rajzol();
 		}
 		aktualis=NULL;
 		delete aktualis;
 	};
-
+*/
 };
 
  void window::bezaras(int x) {
