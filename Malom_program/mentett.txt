@@ -1,0 +1,4 @@
+Szamlalo 1: -30
+Szamlalo 2: 45
+Kivalaszto 1: alma
+Kivalaszto 2: MAX
