@@ -33,7 +33,7 @@ void jatekmester::logikai_mezo_init() {
 	mezok.push_back(init_mezo);
 	init_mezo=new logikai_mezo({12,14,5,20},{{12,14},{5,20}});
 	mezok.push_back(init_mezo);
-	init_mezo=new logikai_mezo({2,23},{{12,13},{5,20}});//14
+	init_mezo=new logikai_mezo({2,23,13},{{12,13},{5,20}});//14
 	mezok.push_back(init_mezo);
 	init_mezo=new logikai_mezo({11,16},{{6,11},{16,17}});
 	mezok.push_back(init_mezo);
@@ -132,31 +132,49 @@ bool jatekmester::szomszedban_van(int aktualis){
 	return false;
 };
 
+bool jatekmester::tud_lepni(){
+	for (int i=0; i<mezok.size(); i++){
+		if (mezok[i]->get_szin()==aktiv_jatekos){
+			if (van_szabad_szomszed(i)){
+				return true;
+			}
+		}
+	};
+	return false;
+}
+
 void jatekmester::lepes_fazis (event ev) {
-	if (ev.button==btn_left) {
-		int aktualis=jatekter->bennevan_mezo(ev.pos_x,ev.pos_y);
-		if (aktualis>-1) {
-			if (mezok[aktualis]->get_szin()==aktiv_jatekos) {
-                if (van_szabad_szomszed(aktualis)) {
-					jatekter->set_szin(aktualis,3);
-					if (selected>=0) {
-						jatekter->set_szin(selected,aktiv_jatekos);
+	if (tud_lepni()) {
+		if (ev.button==btn_left) {
+			int aktualis=jatekter->bennevan_mezo(ev.pos_x,ev.pos_y);
+			if (aktualis>-1) {
+				if (mezok[aktualis]->get_szin()==aktiv_jatekos) {
+					if (van_szabad_szomszed(aktualis)) {
+						jatekter->set_szin(aktualis,3);
+						if (selected>=0) {
+							jatekter->set_szin(selected,aktiv_jatekos);
+						};
+						selected=aktualis;
 					};
-					selected=aktualis;
-                };
-			} else if (mezok[aktualis]->get_szin()==0 && selected>-1) {
-				if (szomszedban_van(aktualis)) {
-					///lepes!
-                    jatekter->set_szin(selected,0);
-                    mezok[selected]->set_szin(0);
-                    mezok[aktualis]->set_szin(aktiv_jatekos);
-                    jatekter->set_szin(aktualis,aktiv_jatekos);
-                    selected=-1;
-					if (malom_vizsgal(mezok[aktualis]->get_malom_szomszed(),aktualis)){
-						statusz="Levesz";
+				} else if (mezok[aktualis]->get_szin()==0 && selected>-1) {
+					if (szomszedban_van(aktualis)) {
+						///lepes!
+						jatekter->set_szin(selected,0);
+						mezok[selected]->set_szin(0);
+						mezok[aktualis]->set_szin(aktiv_jatekos);
+						jatekter->set_szin(aktualis,aktiv_jatekos);
+						selected=-1;
+						if (malom_vizsgal(mezok[aktualis]->get_malom_szomszed(),aktualis)){
+							statusz="Levesz";
+						} else {
+							aktiv_jatekos=aktiv_jatekos%2;
+							aktiv_jatekos++;
+						};
 					} else {
-						aktiv_jatekos=aktiv_jatekos%2;
-						aktiv_jatekos++;
+						if (selected>=0) {
+							jatekter->set_szin(selected,aktiv_jatekos);
+							selected=-1;
+						};
 					};
 				} else {
 					if (selected>=0) {
@@ -170,12 +188,9 @@ void jatekmester::lepes_fazis (event ev) {
 					selected=-1;
 				};
 			};
-		} else {
-			if (selected>=0) {
-				jatekter->set_szin(selected,aktiv_jatekos);
-				selected=-1;
-			};
 		};
+	} else {
+		statusz=="Vesztett";
 	};
 };
 

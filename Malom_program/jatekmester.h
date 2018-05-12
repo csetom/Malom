@@ -23,7 +23,7 @@ private:
 	int selected;
 	bool van_szabad_szomszed(int aktualis);
 	bool szomszedban_van(int aktualis);
-
+	bool tud_lepni();
 public:
 
 	void futtat();
