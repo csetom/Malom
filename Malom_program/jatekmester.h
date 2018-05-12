@@ -6,6 +6,7 @@
 
 class jatekmester {
 private:
+	std::string statusz;
 	std::vector<logikai_mezo *> mezok;
 	grafikai_jatekter * jatekter;
 	int aktiv_jatekos;
@@ -13,11 +14,11 @@ private:
 	void logikai_mezo_init();
 	void jatekter_rajzol();
 	void menu_fazis();
-	void felrakas_fazis();
+	void felrakas_fazis(genv::event ev);
 	void lepes_fazis(int szin);
 	void ugras_fazis(int szin);
-	void malom_vizsgal(int szin);
-	void levetel(int szin);
+	bool malom_vizsgal(std::vector<std::vector<int>> vizsgalandok,int aktualis);
+	void levetel(genv::event ev);
 	void indit();
 
 public:

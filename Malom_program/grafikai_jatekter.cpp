@@ -19,3 +19,6 @@ int grafikai_jatekter::bennevan_mezo(int xpos, int ypos){
 	///ide kell majd meg;
 	return tabla->bennevan_mezo(xpos,ypos);
 }
+void grafikai_jatekter::set_szin(int aktualis, int aktiv_jatekos) {
+	tabla->set_szin(aktualis,aktiv_jatekos);
+};

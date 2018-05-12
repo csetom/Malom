@@ -13,10 +13,10 @@ private :
 
 public:
 	logikai_mezo( std::vector<int> beszomszed , std::vector<std::vector<int>> bemalom_szomszed);
-	std::vector<int> get_szomszed;
-	std::vector<std::vector<int>> get_malom_szomszed;
-	int get_szin;
-    void set_szin(int szin);
+	std::vector<int> get_szomszed();
+	std::vector<std::vector<int>> get_malom_szomszed();
+	int get_szin();
+    void set_szin(int aktiv_jatekos);
 };
 
 

@@ -58,6 +58,7 @@ void jatekmester::logikai_mezo_init() {
 void jatekmester::indit(){
 	grafikai_jatekter * init_jatekter = new grafikai_jatekter();
 	logikai_mezo_init();
+	statusz="Felrak";
 	jatekter=init_jatekter;
 	init_jatekter=NULL;
 	babu_kint=18;
@@ -70,30 +71,78 @@ void torolkep(){
 	gout<<move_to(0,0)<<color(0,0,0)<<box_to(XX-1,YY-1)<<color(255,255,255);
 }
 
+void jatekmester::levetel(event ev) {
+	if (ev.button==btn_left) {
+		int aktualis=jatekter->bennevan_mezo(ev.pos_x,ev.pos_y);
+		if (aktualis>-1) {
+			int m_szin=mezok[aktualis]->get_szin();
+			if (m_szin>0 && m_szin!=aktiv_jatekos) {
+				mezok[aktualis]->set_szin(0);
+				jatekter->set_szin(aktualis,0);
+				if (babu_kint<=0){
+					statusz="Mozgatas";
+				} else {
+					statusz="Felrak";
+				};
+				aktiv_jatekos=aktiv_jatekos%2;
+				aktiv_jatekos++;
+			};
+		};
+	};
+};
+
 void jatekmester::futtat(){
 	indit();
 	event ev;
     while(gin >> ev && ev.keycode!=key_escape) {
 		jatekter->rajzol();
+
+		if (statusz=="Felrak") {
+			felrakas_fazis(ev);
+		};
+		if (statusz=="Levesz"){
+			levetel(ev);
+		};
+
 		gout<<refresh;
-		if (babu_kint>0) {
-            if (ev.button==btn_left) {
-				cout<<jatekter->bennevan_mezo(ev.pos_x,ev.pos_y)<<endl;
-            };
-			felrakas_fazis();
-		} else {
+	};
+
+};
+void jatekmester::felrakas_fazis(event ev) {
+
+	if (ev.button==btn_left) {
+		int aktualis=jatekter->bennevan_mezo(ev.pos_x,ev.pos_y);
+		if (aktualis>-1) {
+			if (mezok[aktualis]->get_szin()==0) {
+				mezok[aktualis]->set_szin(aktiv_jatekos);
+				jatekter->set_szin(aktualis,aktiv_jatekos);
+				babu_kint--;
+				if (malom_vizsgal(mezok[aktualis]->get_malom_szomszed(),aktualis)){
+					statusz="Levesz";
+				} else {
+					aktiv_jatekos=aktiv_jatekos%2;
+					aktiv_jatekos++;
+				};
+			};
+		};
+		if (babu_kint<=0 && statusz=="Felrak"){
+			statusz="Mozgatas";
 		};
 
 	};
 
 };
-void jatekmester::felrakas_fazis() {
-	jatekter->set_statusz("felrakas");
-	for (int i=1;i<=9;i++){
-		for (int jatekos=1; jatekos<=2; jatekos++){
 
-		}
-	}
+bool jatekmester::malom_vizsgal(std::vector<vector<int>> vizsgal,int c) {
+	for (int i=0; i<2; i++){
+			int a=vizsgal[i][0];
+			int b=vizsgal[i][1];
+			if (mezok[a]->get_szin()==mezok[b]->get_szin() && mezok[b]->get_szin()==mezok[c]->get_szin()) {
+cout<<"MALOM"<<endl;
+				return true;
+			}
+	};
+	return false;
 };
 /*
 	event ev;

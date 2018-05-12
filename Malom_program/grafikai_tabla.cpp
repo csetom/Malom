@@ -104,5 +104,9 @@ int grafikai_tabla::bennevan_mezo(int xpos, int ypos){
 	return -1;
 };
 
+void grafikai_tabla::set_szin(int aktualis, int aktiv_jatekos){
+	mezok[aktualis]->set_szin(aktiv_jatekos);
+}
+
 
 

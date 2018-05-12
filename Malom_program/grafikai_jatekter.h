@@ -11,6 +11,7 @@ public:
     void rajzol();
     grafikai_jatekter();
 	int bennevan_mezo(int xpos, int ypos);
+	void set_szin(int aktualis, int aktiv_jatekos);
 };
 
 #endif // GRAFIKAI_JATEKTER_H_INCLUDED
