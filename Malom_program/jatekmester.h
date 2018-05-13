@@ -8,9 +8,12 @@ class jatekmester {
 private:
 	std::string statusz;
 	std::vector<logikai_mezo *> mezok;
+	std::vector<bool> leveheto;
 	grafikai_jatekter * jatekter;
 	int aktiv_jatekos;
 	int babu_kint;
+	int selected;
+	std::vector<int> jatekos_babu_db;
 	void logikai_mezo_init();
 	void jatekter_rajzol();
 	void menu_fazis();
@@ -20,10 +23,12 @@ private:
 	bool malom_vizsgal(std::vector<std::vector<int>> vizsgalandok,int aktualis);
 	void levetel(genv::event ev);
 	void indit();
-	int selected;
+	void levesz_statusz_allit();
 	bool van_szabad_szomszed(int aktualis);
 	bool szomszedban_van(int aktualis);
 	bool tud_lepni();
+	void levehetoseg_vizsgalat();
+
 public:
 
 	void futtat();
