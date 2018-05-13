@@ -5,9 +5,10 @@ class gomb {
 private:
 	int x,y;
 	int mx, my;
+	std::string nev;
 public:
 	void kirajzol();
-	gomb(int bex, int bey, int bemx, int bemy);
+	gomb(int bex, int bey, int bemx, int bemy,std::string nev);
 	virtual void event_handler (genv::event ev);
 	bool bennevan(int xpos, int ypos);
 };

@@ -18,6 +18,7 @@ public:
 	void set_szin(int aktualis, int aktiv_jatekos);
 	void menu_rajzol();
 	void set_gombok(std::vector<gomb * > be);
+	void nyertes(int kicsoda);
 };
 
 #endif // GRAFIKAI_JATEKTER_H_INCLUDED

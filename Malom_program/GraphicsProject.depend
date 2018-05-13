@@ -442,12 +442,12 @@
 1488260528 c:\users\csetom\documents\github\malom\malom_program\include\graphics.hpp
 	<string>
 
-1526119093 c:\users\csetom\documents\github\malom\malom_program\functorbutton.h
+1526225527 c:\users\csetom\documents\github\malom\malom_program\functorbutton.h
 	"gomb.h"
 	"window.h"
 	<functional>
 
-1526119093 c:\users\csetom\documents\github\malom\malom_program\gomb.h
+1526225527 c:\users\csetom\documents\github\malom\malom_program\gomb.h
 	"graphics.hpp"
 
 1526206736 c:\users\csetom\documents\github\malom\malom_program\inputfield.h
@@ -477,10 +477,10 @@
 	<stdlib.h>
 	<string>
 
-1526119093 source:c:\users\csetom\documents\github\malom\malom_program\functorbutton.cpp
+1526225527 source:c:\users\csetom\documents\github\malom\malom_program\functorbutton.cpp
 	"Functorbutton.h"
 
-1526119093 source:c:\users\csetom\documents\github\malom\malom_program\gomb.cpp
+1526225961 source:c:\users\csetom\documents\github\malom\malom_program\gomb.cpp
 	"gomb.h"
 
 1526207240 source:c:\users\csetom\documents\github\malom\malom_program\inputfield.cpp
@@ -534,21 +534,21 @@
 	"widget.hpp"
 	"graphics.hpp"
 
-1526210075 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
+1526226690 c:\users\csetom\documents\github\malom\malom_program\jatekmester.h
 	"logikai_mezo.h"
 	"grafikai_jatekter.h"
 	<vector>
 	"Functorbutton.h"
 
-1526209711 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
+1526226866 c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.h
 	"grafikai_tabla.h"
 	"inputfield.h"
 	"Functorbutton.h"
 
-1526210075 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
+1526226913 source:c:\users\csetom\documents\github\malom\malom_program\jatekmester.cpp
 	"jatekmester.h"
 
-1526209751 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.cpp
+1526227237 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_jatekter.cpp
 	"grafikai_jatekter.h"
 
 1526150460 source:c:\users\csetom\documents\github\malom\malom_program\grafikai_tabla.cpp

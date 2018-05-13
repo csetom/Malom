@@ -1,7 +1,7 @@
 #include "Functorbutton.h"
 using namespace std;
 using namespace genv;
-Functorbutton::Functorbutton(int bex, int bey, int bemx, int bemy, function <void() > func): gomb(bex,bey,bemx,bemy){
+Functorbutton::Functorbutton(int bex, int bey, int bemx, int bemy, function <void() > func,string benev): gomb(bex,bey,bemx,bemy,benev){
 	_function=func;
 
 };

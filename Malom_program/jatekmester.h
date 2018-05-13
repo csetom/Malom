@@ -32,6 +32,7 @@ private:
 	bool tud_lepni();
 	void levehetoseg_vizsgalat();
     void initial();
+    void nyertes();
 public:
 
 	void futtat();

@@ -6,15 +6,20 @@ using namespace genv;
 void jatekmester::initial(){
 	grafikai_jatekter * init_jatekter = new grafikai_jatekter();
 	std::function <void()> fugveny=[&]() { indit();};
-	gomb * init_gomb=new Functorbutton(500,500,30,20,fugveny);///Debug
+	gomb * init_gomb=new Functorbutton(XX/2-70/2,YY/2-30/2 ,70,30,fugveny,"Start");///Debug
+	gombok.push_back(init_gomb);
+	init_gomb=new Functorbutton(XX-120,50,70,30,fugveny,"Restart");
 	gombok.push_back(init_gomb);
 	statusz="Menu";
 	jatekter=init_jatekter;
 	jatekter->set_gombok(gombok);
 	init_jatekter=NULL;
+	init_gomb=NULL;
+	delete init_gomb;
 	delete init_jatekter;
 };
 void jatekmester::logikai_mezo_init() {
+	mezok={};
 	logikai_mezo * init_mezo=new logikai_mezo({1,9},{{1,2},{9,21}}); //0
 	mezok.push_back(init_mezo);
 	init_mezo=new logikai_mezo({0,2,4},{{0,2},{4,7}});//1
@@ -71,9 +76,12 @@ void jatekmester::indit(){
 	vector<bool> init_leveheto (24,0);
 	vector<int> init_jatekos_babu_db (3,9);
 
+
+
 	jatekos_babu_db=init_jatekos_babu_db;
 	leveheto=init_leveheto;
 	jatekter=init_jatekter;
+	jatekter->set_gombok(gombok);
 	logikai_mezo_init();
 	selected=-1;
 	statusz="Felrak";
@@ -121,10 +129,13 @@ void jatekmester::futtat(){
 		torolkep();
 		if (statusz=="Menu"){
 			jatekter->menu_rajzol();
-			for (int i=0; i<gombok.size(); i++){
+
+				gombok[0]->event_handler(ev);
+
+		} else {
+			for (int i=1; i<gombok.size(); i++){
 				gombok[i]->event_handler(ev);
 			};
-		} else {
 			jatekter->rajzol();
 			if (statusz=="Felrak") {
 				felrakas_fazis(ev);
@@ -140,12 +151,15 @@ void jatekmester::futtat(){
 				lepes_fazis(ev);
 			};
 			if (statusz=="Vesztett"){
+				jatekter->nyertes(aktiv_jatekos%2+1);
 			};
 		}
 		gout<<refresh;
 	};
 
 };
+
+
 
 void jatekmester::levehetoseg_vizsgalat(){
 	int leveheto_db=0;

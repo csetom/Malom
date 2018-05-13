@@ -9,7 +9,7 @@ class Functorbutton:public gomb {
 public:
 	std::function <void () > _function;
 	//window * parent;
-	Functorbutton (int bex, int bey, int bemx, int bemy,std::function <void ()> func);
+	Functorbutton (int bex, int bey, int bemx, int bemy,std::function <void ()> func,std::string benev);
 	void action();
 	void event_handler( genv::event ev);
 };

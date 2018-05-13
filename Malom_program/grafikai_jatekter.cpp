@@ -1,5 +1,6 @@
 #include "grafikai_jatekter.h"
 using namespace std;
+using namespace genv;
 grafikai_jatekter::grafikai_jatekter(){
 	grafikai_tabla * init_tabla = new grafikai_tabla(50,50);
 	inputfield * init_kiir=new inputfield(800,20,100,50," ");
@@ -16,17 +17,39 @@ void grafikai_jatekter::set_gombok(vector<gomb * > be){
 };
 
 void grafikai_jatekter::menu_rajzol(){
-	for (int i=0; i<gombok.size(); i++){
-		gombok[i]->kirajzol();
-	}
+
+		gombok[0]->kirajzol();
 
 };
+
+void grafikai_jatekter::nyertes(int ki){
+	gout<<move_to(XX/2+50,YY/2)
+		<<color(255,125,0)
+		<<text("A nyertes: ");
+
+	if (ki==1) {
+		gout<<color(255,0,255);
+		gout<<text("A piros ");
+	} else {
+		gout<<color(255,255,0);
+		gout<<text("A sárga ");
+	};
+	gout <<color(255,125,0)
+		 <<text("játékos! \n")
+		 <<color(255,0,0)
+		 <<text("Kattints a Restart gombra!");
+
+}
 
 void grafikai_jatekter::rajzol(){
 	tabla->rajzol();
 	for (int i=0; i<kiirasok.size(); i++){
 		kiirasok[i]->rajzol();
 	}
+	for (int i=1; i<gombok.size(); i++){
+		gombok[1]->kirajzol();
+	};
+
 };
 void grafikai_jatekter::set_statusz(string be_stat){
 	statusz=be_stat;
