@@ -23,7 +23,7 @@ void grafikai_jatekter::menu_rajzol(){
 };
 
 void grafikai_jatekter::nyertes(int ki){
-	gout<<move_to(XX/2+50,YY/2)
+	gout<<move_to(XX/2+100,YY/2)
 		<<color(255,125,0)
 		<<text("A nyertes: ");
 
@@ -35,9 +35,15 @@ void grafikai_jatekter::nyertes(int ki){
 		gout<<text("A sárga ");
 	};
 	gout <<color(255,125,0)
-		 <<text("játékos! \n")
+		 <<text("játékos!")
+		 <<move_to(XX/2+100,YY/2+20)
 		 <<color(255,0,0)
-		 <<text("Kattints a Restart gombra!");
+		 <<text("Kattints a ")
+		 <<color(0,255,0)
+		 <<text("Restart ")
+		 <<color(255,0,0)
+		 <<text("gombra!");
+
 
 }
 
