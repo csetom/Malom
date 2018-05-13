@@ -4,7 +4,7 @@ using namespace genv;
 grafikai_jatekter::grafikai_jatekter(){
 	grafikai_tabla * init_tabla = new grafikai_tabla(50,50);
 	inputfield * init_kiir=new inputfield(800,20,100,50," ");
-	kiirasok.push_back(init_kiir);
+	//kiirasok.push_back(init_kiir);
 	tabla=init_tabla;
 	init_tabla=NULL;
 	init_kiir=NULL;
