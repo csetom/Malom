@@ -3,12 +3,15 @@
 #include "logikai_mezo.h"
 #include "grafikai_jatekter.h"
 #include <vector>
+#include "Functorbutton.h"
+
 
 class jatekmester {
 private:
 	std::string statusz;
 	std::vector<logikai_mezo *> mezok;
 	std::vector<bool> leveheto;
+	std::vector<gomb *> gombok;
 	grafikai_jatekter * jatekter;
 	int aktiv_jatekos;
 	int babu_kint;
@@ -28,7 +31,7 @@ private:
 	bool szomszedban_van(int aktualis);
 	bool tud_lepni();
 	void levehetoseg_vizsgalat();
-
+    void initial();
 public:
 
 	void futtat();

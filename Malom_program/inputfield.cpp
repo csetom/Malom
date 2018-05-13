@@ -7,17 +7,25 @@ using namespace genv;
 inputfield::inputfield(int xpos, int ypos,int mx,int my,string ertek) :widget(xpos,ypos,mx,my),ertek(ertek){};
 
 
-void inputfield::rajzol(int keret,int rx, int ry) {
-//
-	////	cout<<"szilva";
-		gout
+void inputfield::rajzol() {
+	int rx=x;
+	int ry=y;
+	int keret=2;
+	if (x<0) { rx=0;};
+	if (y<0) {ry=0;};
+	if (x+mx>XX) {rx=XX-mx;};
+	if (y+my>YY) {ry=YY-my;};
+	gout<<move_to(rx,ry)
+		<<color(255,255,255)
+		<<box(mx,my);
+	gout
 
-				<<move_to(rx+keret,ry+keret)
-				<<color(255,125,0)
-				<<box(mx-keret*2,my-keret*2)
-				<<move_to(rx+keret+2,ry+my/2)
-				<<color(255,255,255)
-				<<text(ertek);
+			<<move_to(rx+keret,ry+keret)
+			<<color(0,0,0)
+			<<box(mx-keret*2,my-keret*2)
+			<<move_to(rx+keret+2,ry+my/2)
+			<<color(255,255,255)
+			<<text(ertek);
 };
 string inputfield::get_ertek() {
 	return ertek;

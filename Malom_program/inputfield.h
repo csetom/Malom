@@ -14,9 +14,10 @@ class inputfield : public widget
 {
 private:
 	std::string ertek;
-	void rajzol(int keret,int rx, int ry);
+
 
 public:
+	void rajzol();
 	void set_ertek(std::string bejovo);
 	std::string get_ertek();
 	inputfield (int xpos, int ypos,int,int,std::string ertek);

@@ -3,7 +3,17 @@
 using namespace std;
 using namespace genv;
 
-
+void jatekmester::initial(){
+	grafikai_jatekter * init_jatekter = new grafikai_jatekter();
+	std::function <void()> fugveny=[&]() { indit();};
+	gomb * init_gomb=new Functorbutton(500,500,30,20,fugveny);///Debug
+	gombok.push_back(init_gomb);
+	statusz="Menu";
+	jatekter=init_jatekter;
+	jatekter->set_gombok(gombok);
+	init_jatekter=NULL;
+	delete init_jatekter;
+};
 void jatekmester::logikai_mezo_init() {
 	logikai_mezo * init_mezo=new logikai_mezo({1,9},{{1,2},{9,21}}); //0
 	mezok.push_back(init_mezo);
@@ -60,6 +70,7 @@ void jatekmester::indit(){
 	grafikai_jatekter * init_jatekter = new grafikai_jatekter();
 	vector<bool> init_leveheto (24,0);
 	vector<int> init_jatekos_babu_db (3,9);
+
 	jatekos_babu_db=init_jatekos_babu_db;
 	leveheto=init_leveheto;
 	jatekter=init_jatekter;
@@ -100,24 +111,37 @@ void jatekmester::levetel(event ev) {
 };
 
 void jatekmester::futtat(){
-	indit();
+	srand(time(NULL));
 	event ev;
+	gout.open(XX,YY);
+	gin.timer(30);
+
+	initial();
     while(gin >> ev && ev.keycode!=key_escape) {
-		jatekter->rajzol();
+		torolkep();
+		if (statusz=="Menu"){
+			jatekter->menu_rajzol();
+			for (int i=0; i<gombok.size(); i++){
+				gombok[i]->event_handler(ev);
+			};
+		} else {
+			jatekter->rajzol();
+			if (statusz=="Felrak") {
+				felrakas_fazis(ev);
+			};
+			if (statusz=="Ujjatek"){
+				indit();
+			};
+			if (statusz=="Levesz"){
 
-		if (statusz=="Felrak") {
-			felrakas_fazis(ev);
-		};
-		if (statusz=="Levesz"){
-
-			levetel(ev);
-		};
-		if (statusz=="Lepes"){
-			lepes_fazis(ev);
-		};
-		if (statusz=="Vesztett"){
-cout<<"Vesztes! "<<aktiv_jatekos<<". jatekos";
-		};
+				levetel(ev);
+			};
+			if (statusz=="Lepes"){
+				lepes_fazis(ev);
+			};
+			if (statusz=="Vesztett"){
+			};
+		}
 		gout<<refresh;
 	};
 
@@ -167,6 +191,8 @@ bool jatekmester::szomszedban_van(int aktualis){
 };
 
 bool jatekmester::tud_lepni(){
+	if (jatekos_babu_db[aktiv_jatekos]==3) return true;
+	if (jatekos_babu_db[aktiv_jatekos]<3) return false;
 	for (int i=0; i<mezok.size(); i++){
 		if (mezok[i]->get_szin()==aktiv_jatekos){
 			if (van_szabad_szomszed(i)){
@@ -178,7 +204,7 @@ bool jatekmester::tud_lepni(){
 }
 
 void jatekmester::lepes_fazis (event ev) {
-	if (tud_lepni() && jatekos_babu_db[aktiv_jatekos]>=3) {
+	if (tud_lepni()) {
 		if (ev.button==btn_left) {
 			int aktualis=jatekter->bennevan_mezo(ev.pos_x,ev.pos_y);
 			if (aktualis>-1) {
@@ -224,7 +250,7 @@ void jatekmester::lepes_fazis (event ev) {
 			};
 		};
 	} else {
-		statusz=="Vesztett";
+		statusz="Vesztett";
 	};
 };
 
